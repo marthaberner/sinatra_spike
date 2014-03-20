@@ -1,6 +1,6 @@
 require 'sinatra'
 
-get '/hi' do
-  "Goodbye World"
+get '/' do
+  erb :index
 end
 
