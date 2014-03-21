@@ -3,7 +3,7 @@
 <h1>List of Items</h1>
 <a href="/items/new">Create a new item</a>
 <ul>
-  <% [Item.new(2, "Item 2")].each do |item| %>
+  <% ItemsRepository.new.items.each do |item| %>
     <li><%= item.name %> - <a href="/items/<%= item.id %>">Show item</a></li></li>
 
     <% end %>
