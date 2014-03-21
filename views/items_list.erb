@@ -3,10 +3,10 @@
 <h1>List of Items</h1>
 <a href="/items/new">Create a new item</a>
 <ul>
-  <li>Item 1 - <a href="/items/1">Show item</a></li>
-  <li>Item 2 - <a href="/items/2">Show item</a></li></li>
-  <li>Item 3 - <a href="/items/3">Show item</a></li></li>
+  <% [Item.new(2, "Item 2")].each do |item| %>
+    <li><%= item.name %> - <a href="/items/<%= item.id %>">Show item</a></li></li>
 
+    <% end %>
 </ul>
 
 </body>
