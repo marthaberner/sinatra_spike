@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/items' do
+  @query = params[:filter]
   erb :items_list
 end
 
